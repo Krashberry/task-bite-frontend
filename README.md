@@ -1,4 +1,3 @@
 # task-bite frontend
 
-## Steps
 
