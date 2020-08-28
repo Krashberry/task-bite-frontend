@@ -10,27 +10,23 @@ class Register extends Component {
 
   handleChange = (event) => {
     this.setState({
-      [event.target.name]: event.target.value
+      [event.target.username]: event.target.value
     })
   }
 
   handleSubmit = (event) => {
-    // TODO: complete this function
     event.preventDefault()
 
-    // confirm password is the same
     if (this.state.password !== this.state.password2) return false;
 
     UserModel.create(this.state)
       .then(data => {
         console.log(data);
-        // remember to clear state to also clear the data
         this.setState({
           username: '',
           password: '',
           password2: ''
         })
-        // redirect to the login screen
         this.props.history.push('/login')
       })
   }
@@ -41,7 +37,7 @@ class Register extends Component {
         <h4>Register</h4>
         <form onSubmit={this.handleSubmit}>
           <div className="form-group">
-            <label htmlFor="name">Username</label>
+            <label htmlFor="username">Username</label>
             <input
               onChange={this.handleChange}
               type="username"
@@ -52,7 +48,7 @@ class Register extends Component {
           </div>
 
           <div className="form-group">
-            <label htmlFor="name">Password</label>
+            <label htmlFor="username">Password</label>
             <input
               onChange={this.handleChange}
               type="password"
