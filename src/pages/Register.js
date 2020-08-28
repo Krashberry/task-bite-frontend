@@ -10,7 +10,7 @@ class Register extends Component {
 
   handleChange = (event) => {
     this.setState({
-      [event.target.username]: event.target.value
+      [event.target.name]: event.target.value
     })
   }
 
@@ -37,7 +37,7 @@ class Register extends Component {
         <h4>Register</h4>
         <form onSubmit={this.handleSubmit}>
           <div className="form-group">
-            <label htmlFor="username">Username</label>
+            <label htmlFor="name">Username</label>
             <input
               onChange={this.handleChange}
               type="username"
@@ -48,7 +48,7 @@ class Register extends Component {
           </div>
 
           <div className="form-group">
-            <label htmlFor="username">Password</label>
+            <label htmlFor="name">Password</label>
             <input
               onChange={this.handleChange}
               type="password"

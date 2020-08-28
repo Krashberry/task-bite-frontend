@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ProjectModel from '../models/project';
 import { Link } from 'react-router-dom'
-import ProjectCard from '../components/js/ProjectCard'
+import ProjectSilo from '../components/js/ProjectSilo'
 // BUG: ask about React not wanting to go out into the Back End
 // import User from '../../../back-end/models/user';
 
@@ -23,7 +23,7 @@ class Silo extends Component {
     let Silo = this.state.projects.map((project, index) => {
       return (
         <Link to={`/projects/${ project._id }`} key={index}>
-          <ProjectCard  {...project} />
+          <ProjectSilo  {...project} />
         </Link>
       )
     })
