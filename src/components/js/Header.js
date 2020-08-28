@@ -1,5 +1,5 @@
 import React from 'react';
-import '../sass/Header'
+import '../sass/Header.scss'
 import { Link } from 'react-router-dom'
 
 const Header = (props) => {
@@ -10,12 +10,14 @@ const Header = (props) => {
         { props.currentuser ?
           <> 
           <li><Link to={'/projects'}>Project Silo</Link></li>
-          <li><Link to={'/projects/new'}>+</Link></li>
+          <li><Link to={'/projects/new'}> + </Link></li>
           <li><a href="/logout" onClick={ props.logout }>Log Out</a></li>
           </>
         :
           <>
+          <li><Link to={'/home'}>Home</Link></li>
           <li><Link to={'/login'}>Login</Link></li>
+          <li><Link to={'/register'}>Register</Link></li>
           </>
         }
         </ul>

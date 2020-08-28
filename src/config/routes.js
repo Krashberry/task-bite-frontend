@@ -11,11 +11,11 @@ import ProjectFocus from '../pages/ProjectFocus'
 export default (props) => (
   <Switch>
     <Route exact path= '/' component={ Home } />
-    <Route exact = '/' component={ Register } />
-    <Route exact = '/' component={ Silo } />
-    <Route exact = '/' component={ NewProject } />
-    <Route exact = '/' component={ ProjectFocus } />
-    <Route exact = '/login' component={ 
+    <Route path = '/register' component={ Register } />
+    <Route path = '/projects' component={ Silo } />
+    <Route path = '/projects/new' component={ NewProject } />
+    <Route path = '/projects/:id' component={ ProjectFocus } />
+    <Route path = '/login' component={ 
       (routeProps) => {
       return <Login
               { ...routeProps }

@@ -27,7 +27,10 @@ function App(props) {
 
   return (
     <div className="App">
-      <Header currentUser={ currentUser } logout={ logout }/>
+      <Header 
+        currentUser={ currentUser } 
+        logout={ logout }
+      />
       <Routes 
         currentUser={ currentUser }
         storeUser={ storeUser }
