@@ -1,10 +1,19 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
+import Silo from '../../pages/Silo'
 
 const ProjectSilo = (props) => {
     return (
       <div>
-        
+        <ul>
+          { props.currentuser ?
+            <>
+              <Silo />
+            </>
+            :
+            <>
+            </>
+          }
+        </ul>
       </div>
     );
 }

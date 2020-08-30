@@ -1,15 +1,20 @@
 import React, { useState } from 'react'
 import { withRouter } from 'react-router-dom'
-import Header from './components/js/SideBar'
 import Routes from './config/routes'
 import UserModel from './models/user'
+import ProjectModel from './models/project'
+import SideBar from './components/js/SideBar'
 import './App.css';
 
 function App(props) {
   const [currentUser, setCurrentUser] = useState(localStorage.getItem('userName'))
+  const [project, setProjects] = useState([])
+  // const [tasks, setTasks] =useState([])
 
-  const storeUser = userId => {
+  const storeUser = (userId, projects) => {
     setCurrentUser({ currentUser: userId })
+    setProjects(projects)
+    setTasks(tasks)
     localStorage.setItem('userName', userId)
   }
 
@@ -27,7 +32,7 @@ function App(props) {
 
   return (
     <div className="App">
-      <Header 
+      <SideBar 
         currentUser={ currentUser } 
         logout={ logout }
       />

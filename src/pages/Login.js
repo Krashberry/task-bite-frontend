@@ -23,7 +23,7 @@ handleSubmit = (event) => {
 
       if (!data.user) return false
 
-      this.props.storeUser(data.user)
+      this.props.storeUser(data.user, data.user.projects)
       this.props.history.push('/projects')
     })
     .catch(err => console.log(err))

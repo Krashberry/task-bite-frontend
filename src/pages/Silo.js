@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import ProjectModel from '../models/project';
 import { Link } from 'react-router-dom'
 import ProjectSilo from '../components/js/ProjectSilo'
-// BUG: ask about React not wanting to go out into the Back End
-// import User from '../../../back-end/models/user';
+
+
 
 class Silo extends Component {
   state= {
@@ -16,7 +16,9 @@ class Silo extends Component {
 
   fetchData= () => {
     ProjectModel.all()
-    .then(data => this.setState({ projects: data.projects }))
+    .then(data => {
+      this.setState({ projects: data.projects })
+  })
   }
 
   render() {
