@@ -3,16 +3,22 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@popperjs/core": "^2.4.4",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
-    "bootstrap": "^4.5.2",
+    "axios": "^0.20.0",
+    "bootstrap": "^5.0.0-alpha1",
     "dotenv": "^8.2.0",
+    "ejs": "^3.1.5",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.10.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
-    "sass": "^1.26.10"
+    "sass": "^1.26.10",
+    "tippy.js": "^6.2.6"
   },
   "scripts": {
     "start": "react-scripts start",

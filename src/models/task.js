@@ -1,21 +1,23 @@
 const url = `http://localhost:3001/api/silo`
 
 export default class TaskModel {
-  static all = () => {
-    return fetch(`${url}/tasks`).then(res => res.json())
+  static all = async () => {
+    const res = await fetch(`${url}/tasks`)
+    return await res.json()
   }
-  static show = (taskId) => {
-    return fetch(`${url}/tasks/${taskId}`).then(res => res.json())
+  static show = async (taskId) => {
+    const res = await fetch(`${url}/tasks/${taskId}`)
+    return await res.json()
   }
 
-  static create = (taskData) => {
-    return fetch(`${url}/tasks`, {
+  static create = async (taskData) => {
+    const res = await fetch(`${url}/tasks`, {
       method: "POST",
       headers: {
-        "Content-Type": "application/json"  
+        "Content-Type": "application/json"
       },
       body: JSON.stringify(taskData)
     })
-    .then(res => res.json())
+    return await res.json()
   }
 }

@@ -6,21 +6,21 @@ const SideBar = (props) => {
   return (
     <div className="navigation">
       <ul>
-      { props.currentuser ?
+      { props.currentUser ?
         <> 
           <li>
             <Link to={'/projects'}>Project Silo</Link>
             </li>
-          <li>
+          {/* <li>
             <a href="/" onClick={ props.project.new }>
               <span class="icon"></span>
             </a>
-          </li>
-          <li>
+          </li> */}
+          {/* <li>
             <a href="/" onClick={ props.project.delete }>
 
             </a>
-          </li>
+          </li> */}
           <li>
             <a href="/logout" onClick={ props.logout }>
               Log Out

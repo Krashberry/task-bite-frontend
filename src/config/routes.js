@@ -7,11 +7,14 @@ import Silo from '../pages/Silo'
 import NewProject from '../pages/NewProject'
 import ProjectFocus from '../pages/ProjectFocus'
 
-export default (props) => (
+export default function Routes (props) {
+  return(
   <Switch>
     <Route exact path= '/' component={ Home } />
     <Route path = '/register' component={ Register } />
-    <Route path = '/projects' component={ Silo } />
+    <Route path = '/projects'>
+      <Silo currentUser = { props.currentUser }/>
+    </Route> 
     <Route path = '/projects/new' component={ NewProject } />
     <Route path = '/projects/:id' component={ ProjectFocus } />
     <Route path = '/login' component={ 
@@ -20,8 +23,9 @@ export default (props) => (
               { ...routeProps }
               storeUser={ props.storeUser }
             />
-      } 
+      }
     } />
-
+    <Route path = '/logout'  />
   </Switch>
-)
+  )
+}

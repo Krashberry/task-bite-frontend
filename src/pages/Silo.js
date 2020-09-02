@@ -1,9 +1,5 @@
 import React, { Component } from 'react';
 import ProjectModel from '../models/project';
-import { Link } from 'react-router-dom'
-import ProjectSilo from '../components/js/ProjectSilo'
-
-
 
 class Silo extends Component {
   state= {
@@ -14,28 +10,20 @@ class Silo extends Component {
     this.fetchData()
   }
 
-  fetchData= () => {
-    ProjectModel.all()
+  fetchData() {
+    ProjectModel.all(this.props.currentUser._id)
     .then(data => {
-      this.setState({ projects: data.projects })
+      this.setState({ projects: data })
   })
   }
 
-  render() {
-    let Silo = this.state.projects.map((project, index) => {
-      return (
-        <Link to={`/projects/${ project._id }`} key={index}>
-          <ProjectSilo  {...project} />
-        </Link>
-      )
-    })
-
-    return (
-      <div>
-        <h1>All Projects</h1>
-        { this.state.projects ? Silo : 'Loading...' }
-      </div>
-    );
+render() {
+  return (
+    <>
+      <h1>Project Silo</h1>
+      { this.state.projects ? "Warning" : 'Loading...'}
+    </>
+    )
   }
 }
 

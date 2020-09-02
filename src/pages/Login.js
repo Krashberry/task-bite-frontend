@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import UserModel from '../models/user';
-// import { Redirect } from 'react-router-dom';
 
 class Login extends Component {
   state = {
@@ -10,7 +9,7 @@ class Login extends Component {
 
 handleChange = (event) => {
   this.setState({
-    [event.target.name]: event.target.value,
+    [event.target.name]: event.target.value.trim(),
   })
 }
 
@@ -19,11 +18,8 @@ handleSubmit = (event) => {
 
   UserModel.login(this.state)
     .then(data => {
-      console.log(data)
-
       if (!data.user) return false
-
-      this.props.storeUser(data.user, data.user.projects)
+      this.props.storeUser(data.user)
       this.props.history.push('/projects')
     })
     .catch(err => console.log(err))
@@ -63,10 +59,3 @@ render() {
 }
 
 export default Login;
-
-// if (!data.user) {
-      //   return res.json({
-      //     message: 'No user found.',
-      //     Redirect(register) 
-      //   })
-      // }

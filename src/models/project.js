@@ -1,21 +1,25 @@
 const url = `http://localhost:3001/api/silo`
 
 export default class ProjectModel {
-  static all = () => {
-    return fetch(`${url}/projects`).then(res => res.json())
+  static all = async (userId) => {
+    const res = await fetch(`${url}/projects`, {
+      credentials: 'include'
+    })
+    return await res.json()
   }
-  static show = (projectId) => {
-    return fetch(`${url}/projects/${projectId}`).then(res => res.json())
+  static show = async (projectId) => {
+    const res = await fetch(`${url}/projects/${projectId}`)
+    return await res.json()
   }
 
-  static create = (projectData) => {
-    return fetch(`${url}/projects`, {
+  static create = async (projectData) => {
+    const res = await fetch(`${url}/projects`, {
       method: "POST",
       headers: {
-        "Content-Type": "application/json"  
+        "Content-Type": "application/json"
       },
       body: JSON.stringify(projectData)
     })
-    .then(res => res.json())
+    return await res.json()
   }
 }
