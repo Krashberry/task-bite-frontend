@@ -7,18 +7,19 @@ import './App.css';
 
 function App(props) {
   const [currentUser, setCurrentUser] = useState(
-    JSON.parse(localStorage.getItem('currentUser')))
+    (localStorage.getItem('currentUser')))
 
   const storeUser = (user) => {
+    console.log(user)
     setCurrentUser({ currentUser: user })
-    localStorage.setItem('currentUser', JSON.stringify(user))
+    localStorage.setItem('currentUser', user)
   }
 
   const logout = event => {
     event.preventDefault()
     console.log("logging out")
 
-    localStorage.removeItem('userName')
+    localStorage.removeItem('currentUser')
     UserModel.logout()
       .then(data => {
         console.log(data)

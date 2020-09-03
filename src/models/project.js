@@ -13,7 +13,7 @@ export default class ProjectModel {
   }
 
   static create = async (projectData) => {
-    const res = await fetch(`${url}/projects`, {
+    const res = await fetch(`${url}/projects/new`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"

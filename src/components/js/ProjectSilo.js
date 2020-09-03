@@ -5,12 +5,13 @@ const ProjectSilo = (props) => {
     return (
       <div>
         <ul>
-          { props.currentuser ?
+          { props.currentUser ?
             <>
               <Silo />
             </>
             :
             <>
+            <h4>Nothing to see here folks.</h4>
             </>
           }
         </ul>

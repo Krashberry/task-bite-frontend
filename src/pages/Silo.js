@@ -21,7 +21,6 @@ render() {
   return (
     <>
       <h1>Project Silo</h1>
-      { this.state.projects ? "Warning" : 'Loading...'}
     </>
     )
   }

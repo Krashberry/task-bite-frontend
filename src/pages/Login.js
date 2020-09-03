@@ -9,7 +9,7 @@ class Login extends Component {
 
 handleChange = (event) => {
   this.setState({
-    [event.target.name]: event.target.value.trim(),
+    [event.target.name]: event.target.value,
   })
 }
 
@@ -17,7 +17,8 @@ handleSubmit = (event) => {
   event.preventDefault()
 
   UserModel.login(this.state)
-    .then(data => {
+  .then(data => {
+      console.log(data.user)
       if (!data.user) return false
       this.props.storeUser(data.user)
       this.props.history.push('/projects')

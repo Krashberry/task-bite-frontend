@@ -2,7 +2,7 @@ const REACT_APP_API_URL = "http://localhost:3001/api/silo"
 
 export default class UserModel {
   static async create(data) {
-    const res = await fetch(`${ REACT_APP_API_URL }/silo/auth/register`, {
+    const res = await fetch(`${ REACT_APP_API_URL }/auth/register`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json'},
       body: JSON.stringify(data)
