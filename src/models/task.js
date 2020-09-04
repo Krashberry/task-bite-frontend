@@ -11,7 +11,7 @@ export default class TaskModel {
   }
 
   static create = async (taskData) => {
-    const res = await fetch(`${url}/tasks`, {
+    const res = await fetch(`${url}/tasks/new`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"

@@ -7,13 +7,7 @@ import './components/scss/Main.scss'
 import './App.css';
 
 function App(props) {
-  const [currentUser, setCurrentUser] = useState(
-    (localStorage.getItem('currentUser')))
-  // const [currentUser, setCurrentUser] = useState({
-  //   username: "james",
-  //   password: "password1",
-  //   _id: "5f502212392abe1d320a5e5d"
-  // })
+  const [currentUser, setCurrentUser] = useState((localStorage.getItem('currentUser')))
 
   const storeUser = (user) => {
     console.log(user)

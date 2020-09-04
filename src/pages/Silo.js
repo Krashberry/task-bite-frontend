@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import ProjectModel from '../models/project';
 import { Redirect } from 'react-router-dom';
+import ProjectModel from '../models/project';
 import ProjectCard from '../components/js/ProjectCard'
 import NewProject from './NewProject';
 

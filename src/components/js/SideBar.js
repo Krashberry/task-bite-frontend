@@ -8,9 +8,6 @@ const SideBar = (props) => {
       { props.currentUser ?
         <> 
           <li>
-            <Link to={'/projects'}>Project Silo</Link>
-          </li>
-          <li>
             <a href="/logout" onClick={ props.logout }>
               Log Out
             </a>
