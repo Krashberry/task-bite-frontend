@@ -13,8 +13,16 @@ function NewTask(props) {
   }
   return (
     <div>
-      <form onSubmit={ (e) => handleSubmit(e) }>
-        taskName: <input type="text" placeholder="Task Name" onChange={ (e)=>setTaskName(e.target.value) }/>
+      <form onSubmit={ 
+        (e) => handleSubmit(e) 
+      }>
+        New Task: <input 
+          type="text" 
+          placeholder="Task Name" 
+          onChange={ 
+            (e)=>setTaskName(e.target.value) 
+          }
+        />
       </form>
     </div>
   )

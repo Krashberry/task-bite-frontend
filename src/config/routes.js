@@ -6,6 +6,7 @@ import Register from '../pages/Register'
 import Silo from '../pages/Silo'
 import NewProject from '../pages/NewProject'
 import ProjectFocus from '../pages/ProjectFocus'
+import NewTask from '../pages/NewTask'
 
 export default function Routes (props) {
   return(
@@ -16,6 +17,7 @@ export default function Routes (props) {
       <Silo currentUser = { props.currentUser }/>
     </Route> 
     <Route path = '/projects/new' component={ NewProject } />
+    <Route path = '/tasks/new' component={ NewTask} />
     <Route path = '/projects/:id' component={ ProjectFocus } />
     <Route path = '/login' component={ 
       (routeProps) => {

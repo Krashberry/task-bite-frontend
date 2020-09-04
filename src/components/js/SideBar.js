@@ -7,29 +7,31 @@ const SideBar = (props) => {
       <ul>
       { props.currentUser ?
         <> 
-          <li>
+          <ul>
             <a href="/logout" onClick={ props.logout }>
               Log Out
             </a>
-          </li>
+          </ul>
         </>
       :
         <>
-          <li>
-            <Link to={'/'}>
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link to={'/login'}>
-              Login
-            </Link>
-          </li>
-          <li>
-            <Link to={'/register'}>
-              Register
-            </Link>
-          </li>
+          <ul>
+            <li>
+              <Link to={'/'}>
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link to={'/login'}>
+                Login
+              </Link>
+            </li>
+            <li>
+              <Link to={'/register'}>
+                Register
+              </Link>
+            </li>
+          </ul>
         </>
       }
       </ul>

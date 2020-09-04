@@ -17,10 +17,10 @@ export default function ProjectCard(props) {
         <li>
           <NewTask />
         </li>
-        <button type="submit" onSubmit={ props.project.delete }>
-          Delete Project
-        </button>
       </ul>
+      <button type="submit" onSubmit={ props.project.delete }>
+        Delete Project
+      </button>
     </div>
   )
 }

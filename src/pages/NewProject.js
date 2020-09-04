@@ -14,8 +14,16 @@ function NewProject(props) {
   }
   return (
     <div>
-      <form onSubmit={ (e) => handleSubmit(e) }>
-        projectName: <input type="text" placeholder="Project Title" onChange={ (e)=>setProjectName(e.target.value) }/>
+      <form onSubmit={ 
+        (e) => handleSubmit(e) 
+      }>
+        New Project: <input 
+          type="text" 
+          placeholder="Project Title" 
+          onChange={ 
+            (e)=>setProjectName(e.target.value) 
+          }
+        />
       </form>
     </div>
   )
