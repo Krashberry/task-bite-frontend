@@ -1,0 +1,15 @@
+{
+    "version": 3,
+    "mappings": "ACAA,AAAA,IAAI,CAAC;EACH,UAAU,EAAE,IAAI;CACjB",
+    "sources": [
+        "Main.scss",
+        "Home.scss",
+        "SideBar.scss",
+        "ProjectCard.scss",
+        "ProjectFocus.scss",
+        "Silo.scss",
+        "Tasks.scss"
+    ],
+    "names": [],
+    "file": "Main.css"
+}
